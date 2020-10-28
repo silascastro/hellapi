@@ -4,7 +4,9 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 
 //conexão com o banco de dados
-mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+
+mongoose.connect("mongodb+srv://master_user:qwert123@cluster0.jqrjw.mongodb.net/hellapi?retryWrites=true&w=majority", 
+{useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
